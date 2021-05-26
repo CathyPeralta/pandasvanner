@@ -1,0 +1,152 @@
+:root {
+  --body-font-size: 20px;
+  --menu-item-line-height: 30px;
+  --header-font: "terfens", sans-serif;
+  --body-font: "terfens", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --black: rgba(33, 33, 33, 1);
+  --black-fade: rgba(33, 33, 33, 0.2);
+  --light-grey: #eee;
+  --white: rgba(255, 255, 255, 1);
+  --white-fade: rgba(255, 255, 255, 0.9);
+  --accent-fade: rgba(190, 208, 148, 0.5);
+  --accent: rgba(190, 208, 148, 0.9);
+  --accent-dark: hsla(78, 39%, 40%, 0.9);
+  --text-shadow: 1px 1px 20px var(--black);
+  --text-border: -1px 1px 0 var(--black), 1px 1px 0 var(--black),
+    1px -1px 0 var(--black), -1px -1px 0 var(--black);
+  --bg: linear-gradient(var(--accent-fade), var(--accent-fade)),
+    url("../images/hero-bg.jpg");
+  --accent-shadow: 1px 1px 20px var(--accent);
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--body-font);
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+html,
+body {
+  height: 100%;
+}
+.center {
+  text-align: center;
+}
+
+h2,
+p {
+  font-family: var(--body-font);
+}
+h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+img {
+  max-width: 100%;
+}
+p {
+  line-height: 1.5;
+}
+
+main {
+  background-color: #fafafa;
+}
+
+.bokanu {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  line-height: 1;
+  font-size: 0.8rem;
+  margin: 1rem auto;
+  text-transform: uppercase;
+  background-color: var(--accent);
+  border-radius: 50rem;
+  color: var(--white);
+  border: 1px solid var(--accent);
+  font-family: var(--header-font);
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.bokanu .textborder {
+  text-shadow: var(--text-border);
+}
+.bokanu:hover {
+  background-color: var(--accent-dark);
+}
+.bokanu:disabled {
+  color: var(--black-fade);
+  background-color: var(--accent);
+  border-color: var(--black-fade);
+  cursor: not-allowed;
+}
+.bokanu:disabled .textborder {
+  text-shadow: none;
+}
+
+.bambooborder {
+  border-image-width: 2rem;
+  border-image-slice: 120;
+  border-image-repeat: repeat;
+  border-image-outset: 0;
+  border-image-source: url("../images/bambooborder.png");
+  border-style: solid;
+}
+.bamboobordertop {
+  border-image-width: 2rem 0 0;
+  border-image-slice: 120;
+  border-image-repeat: repeat;
+  border-image-outset: 1rem;
+  border-image-source: url("../images/bambooborder.png");
+  border-style: solid;
+  border-width: calc(0.5rem - 1px) 0 0;
+}
+
+form {
+  width: 100%;
+}
+
+section p {
+  max-width: clamp(45ch, 100%, 75ch);
+  line-height: 1.5;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  line-height: 2;
+}
+
+/* Page css */
+.wrapper.pagewrapper {
+  flex-direction: column;
+  padding-top: 80px;
+  max-width: clamp(45ch, 100%, 65ch);
+}
+.pagewrapper h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #def9a1e3;
+  text-shadow: var(--text-border);
+}
+@media screen and (min-width: 640px) {
+  .bokanu {
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+  }
+}

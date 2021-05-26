@@ -1,0 +1,148 @@
+.placecards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+.minivecka {
+  text-align: center;
+  padding: 0.6rem 0rem;
+  margin-top: 3rem;
+}
+
+.placecards input,
+.periodcards input,
+.pandamini input {
+  position: absolute;
+  opacity: 0;
+}
+.pandamini input:checked + .periodcard,
+.placecards input:checked + .placecard,
+.periodcards input:checked + .periodcard {
+  border-width: 3px;
+}
+
+.placecard:hover,
+.placecards input:checked + .placecard {
+  transform: translateY(5px);
+  box-shadow: 0 5px 0 var(--accent-dark);
+  background: var(--accent);
+}
+
+.periodcard:hover,
+.periodcards input:checked + .periodcard,
+.pandamini input:checked + .periodcard {
+  transform: translateY(5px);
+  border-color: var(--accent);
+  box-shadow: 0 5px 0 #d5b89a;
+  background: #e7a665c7;
+  /* background: #c68d54c7; */
+}
+
+.placecard,
+.periodcard {
+  display: flex;
+  /* background-color: #d5b89a; */
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  /* background: url(https://vaxer.stockholm/globalassets/omraden/-stadsutvecklingsomraden/arstafaltet/arstafaltet-flygbild-vision-2048.jpg?preset=fullbredd-hog-stor); */
+  background-size: cover;
+  color: var(--white);
+  font-weight: 600;
+  border: 1px solid var(--accent-dark);
+  transition: all 0.1s ease-in;
+  text-shadow: var(--text-border);
+  text-align: center;
+}
+
+.periodcards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.2rem;
+  margin-bottom: 1rem;
+}
+.placecard {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.38),
+      rgba(255, 255, 255, 0.38)
+    ),
+    url(../images/placecardbg.jpeg);
+  background-size: cover;
+  box-shadow: 0 10px 0 var(--accent-dark);
+  flex-direction: column;
+  line-height: 1;
+}
+
+.periodcard {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.38),
+      rgba(255, 255, 255, 0.38)
+    ),
+    url(../images/periodcardbg.jpg);
+
+  background-size: cover;
+  height: 80px;
+  font-size: 1.5rem;
+  box-shadow: 0 10px 0 #97734fe0;
+  /* box-shadow: 0 10px 0 #f2b887; */
+  line-height: 1;
+}
+.placecard span {
+  font-size: 1rem;
+}
+.formwrapper {
+  display: grid;
+
+  align-items: center;
+  gap: 2rem;
+}
+
+.formwrapper img {
+  max-height: 450px;
+}
+.formimagewrapper {
+  display: none;
+}
+.formwrapper h3 {
+  margin-top: 3rem;
+}
+.formwrapper .bokanu {
+  margin-top: 3rem;
+}
+details h2 {
+  display: inline-block;
+}
+summary {
+  background-color: var(--accent);
+  list-style: none;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+summary .wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+summary .wrapper img {
+  width: 4rem;
+}
+@media screen and (min-width: 640px) {
+  .formwrapper {
+    grid-template-columns: 1fr 2fr;
+  }
+  .placecard {
+    font-size: 3rem;
+  }
+  .formimagewrapper {
+    display: initial;
+  }
+  summary .wrapper img {
+    display: none;
+  }
+}

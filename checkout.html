@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pandas vänner - Äventyr, rörelse, gemenskap</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/rqw5djy.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/forms.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/checkout.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+  </head>
+  <body class="checkout">
+    <header>
+      <a class="home" href="/">
+        <img src="./images/logo.png" alt="logo" /> Pandas Vänner
+      </a>
+    </header>
+
+    <main>
+      <div class="wrapper checkoutwrapper">
+        <a class="back" href="/">← Tillbaka</a>
+        <h2>Kassa</h2>
+
+        <div class="shoppingcart">
+          <div class="shoppingcartleft">
+            <div class="summary">
+              <h4>Sammanfattning</h4>
+
+              <div class="checkouttablegrid">
+                <div>
+                  <img id="img" src="" />
+                </div>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>Paket</td>
+                      <td>Plats</td>
+                      <td>Vecka</td>
+                      <td>Pris</td>
+                    </tr>
+                    <tr>
+                      <td id="valdkurs"></td>
+                      <td id="plats"></td>
+                      <td id="period"></td>
+                      <td id="pris"></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div><!--Empty div for grid--></div>
+                <p>
+                  I periodsavgift ingår, en Välkomnspåse, vattenflaska, diplom.
+                </p>
+              </div>
+            </div>
+
+            <form
+              class="checkoutform"
+              action="https://mailthis.to/info@pandasvanner.se"
+              method="POST"
+              enctype="multipart/form-data"
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="Bokning Pandas vänner"
+              />
+              <input
+                type="hidden"
+                name="_after"
+                value="https://pandasvanner.se/orderbekraftelse.html"
+              />
+              <input type="hidden" name="_honeypot" value="" />
+              <input id="platshidden" name="plats" type="hidden" />
+              <input id="periodhidden" name="period" type="hidden" />
+              <input id="kurshidden" name="kurs" type="hidden" />
+              <div>
+                <h4>Barnets information</h4>
+                <label for="barnnamn">Barnets för- och efternamn:</label>
+
+                <input
+                  id="barnnamn"
+                  name="barnnamn"
+                  type="text"
+                  required
+                  placeholder="Ange Namn"
+                />
+
+                <label for="alder">Barnets ålder:</label>
+                <select id="alder" name="alder" required>
+                  <option value="">Välj Ålder</option>
+                  <option value="2">2 år</option>
+                  <option value="3">3 år</option>
+                  <option value="4">4 år</option>
+                  <option value="5">5 år</option>
+                  <option value="6">6 år</option>
+                  <option value="7">7 år</option>
+                  <option value="8">8 år</option>
+                </select>
+
+                <label for="extrainfo">
+                  Allergier/Bra att veta (valfritt):</label
+                >
+                <textarea
+                  id="extrainfo"
+                  name="extrainfo"
+                  placeholder="Eventuella allergier eller annat som är bra att veta."
+                ></textarea>
+              </div>
+              <div>
+                <h4>Förälders information</h4>
+                <label for="foraldernamn">Förälders för- och efternamn:</label>
+                <input
+                  id="foraldernamn"
+                  name="foraldernamn"
+                  type="text"
+                  required
+                  placeholder="Ange namn"
+                />
+
+                <label for="email">Mejladress:</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="Ange e-postadress"
+                />
+
+                <label for="telefonnummer">Telefonnummer:</label>
+                <input
+                  id="telefonnummer"
+                  name="telefonnummer"
+                  type="text"
+                  required
+                  placeholder="Ange telefonummer"
+                />
+              </div>
+
+              <div class="kopvillkor">
+                <input
+                  type="checkbox"
+                  name="accepteravillkor"
+                  id="accepteravillkor"
+                  required
+                />
+                <label for="accepteravillkor">Jag godkänner villkoren. </label>
+                <a href="/kopvillkor.html" target="_blank"
+                  >Se fullständiga köpvillkor.</a
+                >
+              </div>
+
+              <button class="bokanu" type="submit">
+                <span class="textborder">Gå till betalning</span>
+              </button>
+            </form>
+          </div>
+
+          <div id="smart-button-container" class="paypal-container">
+            <div style="text-align: center" class="paypal-inner">
+              <div class="complete-before-payment">
+                Fyll i uppgifterna i formuläret innan du betalar
+              </div>
+              <div id="paypal-button-container"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="loader hidden"><h3>Vi behandlar din betalning...</h3></div>
+    </main>
+    <footer class="bamboobordertop">
+      <div class="footerlists">
+        <ul>
+          <li><a href="#packages">Paket</a></li>
+          <li><a href="villkor.html">Villkor</a></li>
+          <li><a href="COVID-19.html">COVID-19</a></li>
+        </ul>
+
+        <ul>
+          <li>Support</li>
+          <li>
+            <a href="mailto:info@pandasvanner.se">info@pandasvanner.se</a>
+          </li>
+          <li><a href="tel:+46720232205">+46 72 0232205</a></li>
+        </ul>
+      </div>
+      <p>© Pandas Vänner 2021</p>
+    </footer>
+
+    <script
+      src="https://www.paypal.com/sdk/js?client-id=ATNeyiezrDpPOm1rwhxg0Nk0Ym_eAvJUSY0C8_5_gLl65zglmVesLYKilVsh2jokR2mM53hvRdkoCNz-&currency=SEK"
+      data-sdk-integration-source="button-factory"
+    ></script>
+    <script src="./js/paypal.js"></script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pandas vänner - Äventyr, rörelse, gemenskap</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/rqw5djy.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+  </head>
+  <body class="checkout">
+    <header>
+      <a class="home" href="/">
+        <img src="./images/logo.png" alt="logo" /> Pandas Vänner
+      </a>
+    </header>
+
+    <main>
+      <div class="pagewrapper wrapper">
+        <h2>Tack för ditt köp!</h2>
+
+        <div>
+          <!-- vill att hemsidan skickar vidare om de valt panda mini eller panda stor! -->
+          <p>
+            Vad kul att du ska vara med i <span id="kurs"></span> i
+            <span id="plats"></span>. Vi ser verkligen fram emot att träffa er
+            <span id="period"></span>. <br />
+            Du är nu officiellt en del av Panda Family!
+          </p>
+          <p>
+            Vi har tagit emot din beställning och kommer att skicka en
+            bekräftelse till din e-postadress.
+          </p>
+          <p>
+            Om du inte har fått en bekräftelse inom 24 timmar ska du kontakta
+            kundsupport.
+            <a href="mailto:info@pandasvanner.se">info@pandasvanner.se</a>
+          </p>
+          <p>
+            Om du har några frågor eller funderingar kring din beställning,
+            tveka inte att kontakta oss.
+          </p>
+        </div>
+        <iframe
+          height="0"
+          style="border: none"
+          id="mailframe"
+          src="http://mailthis.to/confirm"
+        ></iframe>
+      </div>
+    </main>
+    <footer class="bamboobordertop">
+      <div class="footerlists">
+        <ul>
+          <li><a href="index.html#packages">Paket</a></li>
+          <li><a href="villkor.html">Villkor</a></li>
+          <li><a href="COVID-19.html">COVID-19</a></li>
+        </ul>
+
+        <ul>
+          <li>Support</li>
+          <li>
+            <a href="mailto:info@pandasvanner.se">info@pandasvanner.se</a>
+          </li>
+          <li><a href="tel:+46720232205">+46 72 0232205</a></li>
+        </ul>
+      </div>
+      <p>© Pandas Vänner 2021</p>
+    </footer>
+    <script src="./js/orderconfirm.js" />
+  </body>
+</html>

@@ -1,0 +1,15 @@
+select,
+input[type="text"],
+input[type="email"],
+textarea {
+  background-color: var(--accent-fade);
+  border: 1px solid var(--accent-dark);
+  width: 100%;
+  padding: 0.6rem;
+}
+select,
+input[type="text"],
+input[type="email"],
+textarea {
+  margin-bottom: 1rem;
+}
