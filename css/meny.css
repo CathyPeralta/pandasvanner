@@ -12,14 +12,17 @@
   line-height: var(--menu-item-line-height);
   color: var(--white);
   text-decoration: none;
-  padding: 0.8em;
+  padding: 0 0.8em;
   text-shadow: 1px 1px 1px var(--black);
   font-family: var(--body-font);
   font-weight: bold;
+  display: inline-block;
+  height: var(--menu-item-line-height);
 }
 .meny li a:hover,
 .meny li a:focus {
   text-decoration: underline;
+  background-color: var(--accent-dark);
 }
 @media screen and (max-width: 768px) {
   .meny {
